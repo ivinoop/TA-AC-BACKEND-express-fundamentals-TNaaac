@@ -2,7 +2,7 @@ const express = require('express');
 
 let app = express();
 
-// Middlware
+// Middlware Function
 app.use('/admin', (req, res, next) => {
   console.log(req.method, req.url);
   next();
