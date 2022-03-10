@@ -1,0 +1,15 @@
+{
+  "name": "altcampus-assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "jest --passWithNoTests"
+  },
+  "author": "AltCampus",
+  "license": "GNU GPL V3",
+  "dependencies": {
+    "express": "^4.17.3",
+    "jest": "^26.0.1"
+  }
+}
