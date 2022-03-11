@@ -18,13 +18,14 @@ app.get('/about', (req, res) => {
   res.send('About page');
 });
 
+// 404 handler
 app.use((req, res, next) => {
-  next('Error 404: Page not found');
+  res.send('Error 404: Page not found');
 });
 
+// custom error handler
 app.use((err, req, res, next) => {
-  // console.log(err);
-  res.send(err);
+  res.status(500).send(err);
 });
 
 app.listen(3000, () => {
