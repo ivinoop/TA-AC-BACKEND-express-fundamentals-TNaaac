@@ -1,0 +1,95 @@
+/* General */
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.section-padding {
+  padding: 2rem 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.jcc {
+  justify-content: center;
+}
+
+.jcl {
+  justify-content: left;
+}
+
+.jsb {
+  justify-content: space-between;
+}
+
+.jcr {
+  justify-content: right;
+}
+
+.jic {
+  justify-items: center;
+}
+
+.aic {
+  align-items: center;
+}
+
+.tac {
+  text-align: center;
+}
+
+.ai-start {
+  align-items: flex-start;
+}
+
+.column {
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+}
+
+.section-heading {
+  text-align: center;
+  & h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  & .underline {
+    margin: 10px auto;
+  }
+}
+
+.underline {
+  background-color: $primary-green;
+  height: 5px;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.box-shadow {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
