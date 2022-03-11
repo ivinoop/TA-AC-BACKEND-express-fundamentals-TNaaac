@@ -2,6 +2,12 @@ const express = require('express');
 
 let app = express();
 
+// Custom middleware
+app.use((req, res, next) => {
+  let date = new Date;
+  console.log(req.method, req.url, date);
+  next();
+});
 
 // Routes
 app.get('/', (req, res) => {
@@ -17,17 +23,7 @@ app.get('/contact', (req, res) => {
   res.send('Contact page');
 });
 
-let loggerMiddleware = (req, res, next) => {
-  let method = req.method;
-  let url = req.url;
-  let date = new Date();
-  
-  // let logger = `${method} ${url} ${date}`;
-  res.send(method, url, date);
-  next();
-}
 
-app.use(loggerMiddleware());
 
 app.listen(3000, () => {
   console.log('=> Server listening on port 3000');
