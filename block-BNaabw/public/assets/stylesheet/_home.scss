@@ -1,0 +1,305 @@
+// Header 
+
+header {
+  padding: 2rem;
+  color: #000;
+  & a {
+    color: #000;
+  }
+  & .animated-underline::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0.2rem;
+    margin-top: 5px;
+    border-radius: 1rem;
+    background: $primary-green;
+    transition: width .3s;
+  }
+  & .animated-underline:hover::after {
+    width: 100%;
+  }
+  & .logo {
+    font-size: 44px;
+    & a {
+      font-family: 'Montserrat Subrayada', sans-serif;
+    }
+  }
+  & li {
+    margin: 0 15px;
+    font-size: 1.2rem;
+  }
+}
+
+// Mobile Menu Icon
+
+.menu-icon {
+  position: relative;
+  & .hamburger {
+    display: none;
+    border: none;
+    outline: none;
+    background: none;
+    z-index: 10;
+    cursor: pointer;
+    position: absolute;
+  }
+  & i {
+    color: #000;
+    font-size: 2rem;
+  }
+}
+
+// Mobile Menu Page
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: $primary-black;
+  height: 50%;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  z-index: 13;
+  & .mobile-menu-close {
+    text-align: right;
+    & i {
+      font-size: 2rem;
+      font-weight: 900;
+    }
+  }
+  & ul {
+    padding-top: 5rem;
+    & li {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 1rem;
+      & a {
+        color: $primary-black;
+      }
+    }
+  }
+}
+
+// Hero
+
+.hero {
+  background-color: #fff;
+  border: 0.5px solid $primary-green;
+  color: #000;
+  & .container {
+    max-width: 600px;
+    padding: 1rem;
+  }
+  & img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+  }
+  & .hero-content {
+    text-align: center;
+    margin: 0 auto;
+    & h3 {
+      font-size: 1.8rem;
+    }
+    & p {
+      font-size: 1.2rem;
+      padding: 2rem 0;
+    }
+    & .social-links {
+      & i {
+        color: #000;
+        font-size: 20px;
+      }
+      & a {
+        margin: 0 8px;
+      }
+      & i:hover {
+        color: $primary-green;
+      }
+    }
+  }
+}
+
+// Skills
+
+.skills {
+  & .section-heading {
+    .underline {
+      width: 5%;
+    }
+  }
+  & .skills-card {
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 0.6rem;
+    & li {
+      margin: 2rem;
+      & .mongodb {
+        width: 380px;
+      }
+    }
+    & img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+  }
+}
+
+
+// Projects
+
+.projects {
+  & .underline {
+    width: 4%;
+  }
+  & .projects-list {
+    margin-top: 2rem;
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+  }
+  & .project-card {
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    & img {
+      height: 180px;
+      object-fit: cover;
+    }
+    & .project-links {
+      & li {
+        margin: 0 5px;
+        font-size: 1rem;
+        background-color: $primary-black;
+        padding: 6px 8px;
+        border-radius: 10px;
+        & a {
+          color: #fff;
+          font-size: 0.8rem;
+        }
+        & i {
+          color: #fff;
+        }
+      }
+    }
+  }
+  & .project-tags {
+    border-top: 2px solid $primary-green;
+    padding: 1rem 0;
+    & li {
+      font-size: 0.8rem;
+      font-weight: 500;
+      background-color: $primary-green;
+      border-radius: 0.4rem;
+      padding: 4px 6px;
+      color: #fff;
+      margin: 0 1px;
+    }
+  }
+  & h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 1rem 0;
+  }
+  & p {
+    font-size: 0.8rem;
+  }
+  & h4, & p {
+    text-align: center;
+  }
+}
+
+// About
+
+.about {
+  border: 1px solid lightgrey;
+  background-color: #fff;
+  color: #000;
+  & .underline {
+    width: 4%;
+  }
+  & .container {
+    max-width: 840px;
+  }
+  & .about-content {
+    text-align: left;
+    & .underline {
+      margin-left: 0;
+      margin-right: 0;
+      width: 10%;
+    }
+    & h5 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin: 10px 0;
+    }
+    & p {
+      margin-bottom: 3rem;
+      line-height: 1.4;
+      font-size: 15px;
+    }
+  }
+}
+
+// Contact
+
+.contact {
+  & .underline {
+    width: 5%;
+  }
+  & .form {
+    max-width: 500px;
+    text-align: left;
+    margin: 0 auto;
+    margin-top: 2rem;
+    & input, & label, & textarea {
+      display: block;
+      width: 100%;
+    }
+    & input, & textarea {
+      margin: 0.4rem 0 1rem 0;
+      padding: 8px;
+      font-family: inherit;
+      border-radius: 0.8rem;
+      border: 1px solid rgb(151, 151, 151);
+      outline: none;
+    }
+  }
+  & .contact-btn {
+    background-color: $primary-black;
+    padding: 10px 10px;
+    font-family: inherit;
+    color: #fff;
+    border-radius: 0.4rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+// Footer
+
+.footer {
+  text-align: center;
+  background-color: $primary-black;
+  padding: 20px 0;
+  & i {
+    font-size: 1.4rem;
+    color: #fff;
+    margin: 0 1rem;
+  }
+  & i:hover {
+    color: $primary-green;
+  }
+}
